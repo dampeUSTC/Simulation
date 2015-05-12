@@ -4,5 +4,8 @@
 BOOST_PYTHON_MODULE(libDmpSimAlg){
   using namespace boost::python;
 
-  class_<DmpSimAlg,boost::noncopyable,bases<DmpVAlg> >("DmpSimAlg",init<>());
+  class_<DmpSimAlg,boost::noncopyable,bases<DmpVAlg> >("DmpSimAlg",init<>())
+     .def("SaveTrackVertex",    &DmpSimAlg::SaveTrackVertex)
+   ;
 }
+

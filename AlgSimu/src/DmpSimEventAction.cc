@@ -45,11 +45,3 @@ void DmpSimuEventAction::EndOfEventAction(const G4Event* evt)
 
 
 
-
-
-
-
-
-
-
-

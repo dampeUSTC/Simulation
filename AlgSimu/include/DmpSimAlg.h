@@ -53,6 +53,7 @@ public:
    *    |  |  +--Translation    // deault: "0 0 0"
    *    |  |  +--Rotation       // deault: "0 0 0"
    */
+  void SaveTrackVertex() {_SaveTrackVertex = true;}
   bool Initialize();
   bool ProcessThisEvent();
   bool Finalize();
@@ -66,6 +67,9 @@ private:
   DmpSimDetector        *fDetector;     // DAMPE detector
   DmpSimTrackingAction  *fTracking;     // tracking action
   DmpSimuEventAction    *fEvent;        // event action
+
+private:
+  bool  _SaveTrackVertex;
 
 };
 

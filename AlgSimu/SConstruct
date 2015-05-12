@@ -43,6 +43,8 @@ ProcessThisDir("../Geometry/BTOctober2014",prefix+'/share/Geometry/BTOctober2014
 # install Vis.mac
 Default(Command(prefix+'/share/Simulation/DmpSimGUI.mac','./share/DmpSimGUI.mac',Copy("$TARGET","$SOURCE")))
 Default(Command(prefix+'/share/Simulation/DmpSimVis.mac','./share/DmpSimVis.mac',Copy("$TARGET","$SOURCE")))
+Default(Command(prefix+'/share/Simulation/AttPar','./share/AttPar',Copy("$TARGET","$SOURCE")))
+Default(Command(prefix+'/share/Simulation/MIPsPar','./share/MIPsPar',Copy("$TARGET","$SOURCE")))
 
 #-------------------------------------------------------------------
 # main build

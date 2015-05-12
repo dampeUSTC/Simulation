@@ -28,7 +28,7 @@ DMPSW.RootIOSvc.Set("Output/WriteList","Event/MCTruth;Metadata/MCTruth")  # spli
 simAlg = DmpSim.DmpSimAlg()
 #DMPSW.RootIOSvc.Set("Output/FileName","./DmpSim_run_00.root")   # if NOT set, will use DmpSim_Seed-sim.root
 #-------------------------------------------------------------------
-simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
+#simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
 #simAlg.Set("Physics","QGSP_BERT")  # If NOT set, will use QGSP_BIC
 #simAlg.Set("Gdml","../../Geometry/EQM/DAMPE.gdml")     # if NOT set, will use $DMPSWSYS/share/Geometry/FM/DAMPE.gdml
 simAlg.Set("Gdml",DMPSW.WorkPath+"/share/Geometry/BTOctober2014/DAMPE_PS.gdml")     # if NOT set, will use $DMPSWSYS/share/Geometry/FM/DAMPE.gdml
@@ -38,11 +38,11 @@ simAlg.Set("Gdml",DMPSW.WorkPath+"/share/Geometry/BTOctober2014/DAMPE_PS.gdml") 
 #simAlg.Set("BT/DAMPE/Translation","-13.75 -13.75 0")  # uint: mm. default is "0 0 0"
 simAlg.Set("BT/PbGlass/Delete","yes")
 
-simAlg.Set("BT/PhotonGenerator/Material","G4_W") # g4 material, default is G4_Galactic
-simAlg.Set("BT/PhotonGenerator/Size","50 50 0.5")  # unit: mm, reset default size(200 200 0.5) mm
+#simAlg.Set("BT/PhotonGenerator/Material","G4_W") # g4 material, default is G4_Galactic
+#simAlg.Set("BT/PhotonGenerator/Size","50 50 0.5")  # unit: mm, reset default size(200 200 0.5) mm
 #simAlg.Set("BT/PhotonGenerator/Thickness","10")  # unit: mm, just reset the default thickness(0.5)
 #simAlg.Set("BT/PhotonGenerator/Position","-300.0 0 -8000")  # unit: mm, reset default position(-300 0 -8000)
-simAlg.Set("BT/PhotonGenerator/Offset","10")  # unit: mm, an offset to the default position_z(-8000)
+#simAlg.Set("BT/PhotonGenerator/Offset","10")  # unit: mm, an offset to the default position_z(-8000)
 #-------------------------------------------------------------------
 # Set gps   Warning: NEVER use "gps/direction" and "gps/centre" in job option
 #simAlg.Set("gps/centre","0 0 20000 mm")
