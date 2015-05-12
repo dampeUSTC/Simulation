@@ -46,6 +46,8 @@ private:
   double TotalE[616];
   TRandom3 *RanGaus[616];
   TVector3 Position;
+private:
+  std::string _CaliParPath;
 };
 
 #endif

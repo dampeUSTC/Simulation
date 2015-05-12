@@ -7,6 +7,8 @@
 #include "G4Step.hh"
 #include "G4TouchableHistory.hh"
 
+#include <stdlib.h>     // getenv()
+
 #include "DmpSimBgoSD.h"
 #include "DmpEvtBgoHits.h"
 #include "DmpDataBuffer.h"
@@ -75,6 +77,7 @@ DmpSimBgoSD::DmpSimBgoSD()
  :G4VSensitiveDetector("BgoSD"),
   fEvtMCBgo(0)
 {
+  _CaliParPath = (std::string)getenv("DMPSWWORK")+"/share/";
   GetMipPar();
   GetAttPar();
   for (int i=0;i<616;i++){
@@ -148,7 +151,8 @@ void DmpSimBgoSD::GetAttPar(){
 
   //Get Attenuation coefficients 
   ifstream Apar;
-  Apar.open("../CaliParameter/Attenuation/AttPar");
+  std::string fn = _CaliParPath+"Simulation/AttPar";
+  Apar.open(fn.c_str());
    if(!Apar.good()){
     std::cout<<"Can not open Att Par file!"<<std::endl;
     exit(1);
@@ -168,7 +172,8 @@ void DmpSimBgoSD::GetMipPar(){
 
   //Get MIPs parameters
   ifstream Mpar;
-  Mpar.open("../CaliParameter/MIPs/MIPsPar");
+  std::string fn = _CaliParPath+"Simulation/MIPsPar";
+  Mpar.open(fn.c_str());
   if(!Mpar.good()){
     std::cout<<"Can not open MIPs Par file!"<<std::endl;
     exit(1);

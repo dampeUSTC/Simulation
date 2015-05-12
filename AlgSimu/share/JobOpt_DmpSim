@@ -28,7 +28,7 @@ DMPSW.RootIOSvc.Set("Output/WriteList","Event/MCTruth;Metadata/MCTruth")  # spli
 simAlg = DmpSim.DmpSimAlg()
 #DMPSW.RootIOSvc.Set("Output/FileName","./DmpSim_run_00.root")   # if NOT set, will use DmpSim_Seed-sim.root
 #-------------------------------------------------------------------
-simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
+#simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
 #simAlg.Set("Physics","QGSP_BERT")  # If NOT set, will use QGSP_BIC
 #simAlg.Set("Gdml","../../Geometry/EQM/DAMPE.gdml")     # if NOT set, will use $DMPSWSYS/share/Geometry/FM/DAMPE.gdml
 simAlg.Set("Gdml",DMPSW.WorkPath+"/share/Geometry/BTOctober2014/DAMPE_PS.gdml")     # if NOT set, will use $DMPSWSYS/share/Geometry/FM/DAMPE.gdml

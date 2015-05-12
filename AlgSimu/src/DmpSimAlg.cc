@@ -32,7 +32,8 @@ DmpSimAlg::DmpSimAlg()
   fPhyFactory(0),
   fSource(0),
   fDetector(0),
-  fTracking(0)
+  fTracking(0),
+  _SaveTrackVertex(false)
 {
   fMetadata = new DmpMetadata();
   gDataBuffer->RegisterObject("Metadata/MCTruth/JobOpt",fMetadata,"DmpMetadata");
@@ -75,7 +76,8 @@ bool DmpSimAlg::Initialize(){
   fPhyFactory = new G4PhysListFactory();            fSimRunMgr->SetUserInitialization(fPhyFactory->GetReferencePhysList(fMetadata->GetValue("Physics")));
   fSource = new DmpSimPrimaryGeneratorAction();     fSimRunMgr->SetUserAction(fSource);      // only Primary Generator is mandatory
   fDetector = new DmpSimDetector();                 fSimRunMgr->SetUserInitialization(fDetector);
-  fTracking = new DmpSimTrackingAction();           fSimRunMgr->SetUserAction(fTracking);
+  fTracking = new DmpSimTrackingAction();
+  if(_SaveTrackVertex) fSimRunMgr->SetUserAction(fTracking);
   fEvent    = new DmpSimuEventAction(fTracking);    fSimRunMgr->SetUserAction(fEvent);
   fSimRunMgr->Initialize();
   fSource->ApplyGPSCommand(); // must after fSimRunMgr->Initialize()
