@@ -14,7 +14,7 @@
 //-------------------------------------------------------------------
 DmpSimTrackingAction::DmpSimTrackingAction():fTrackInfor(0){
   fTrackInfor = new DmpEvtMCTrack();
-  gDataBuffer->RegisterObject("Event/MCTruth/TrackVertex",fTrackInfor,"DmpEvtMCTrack");
+//  gDataBuffer->RegisterObject("Event/MCTruth/TrackVertex",fTrackInfor,"DmpEvtMCTrack");
 }
 
 //-------------------------------------------------------------------

@@ -14,7 +14,7 @@ import libDmpSimAlg as  DmpSim     # Load your lib.
 
 #-------------------------------------------------------------------
 # Global setting
-DMPSW.Core.Set("EventNumber","200")     # MUST event number for simulation!!!
+DMPSW.Core.Set("EventNumber","5")     # MUST event number for simulation!!!
 #DMPSW.Core.Set("StartTime","20130101-0000")     # if NOT set, start from launch time
 #DMPSW.Core.Set("StopTime","20160101-0000")      # if NOT set, end at 2113.01.01
 #DMPSW.Core.Set("LogLevel","Debug")      # Value = {Error | Warning | Info | Debug}. If NOT set, will use Info.
@@ -24,20 +24,19 @@ DMPSW.Core.Set("EventNumber","200")     # MUST event number for simulation!!!
 DMPSW.RootIOSvc.Set("Output/WriteList","Event/MCTruth;Metadata/MCTruth")  # split by ;
 
 #-------------------------------------------------------------------
-# Creat user's service or algorithm 
+# Creat user's service or algorithm
 simAlg = DmpSim.DmpSimAlg()
 #DMPSW.RootIOSvc.Set("Output/FileName","./DmpSim_run_00.root")   # if NOT set, will use DmpSim_Seed-sim.root
 #-------------------------------------------------------------------
-#simAlg.Set("Physics","G4EmStandardPhysics")  # If NOT set, will use QGSP_BIC
+#simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
+#simAlg.Set("Physics","QGSP_BERT")  # If NOT set, will use QGSP_BIC
 #simAlg.Set("Gdml","../../Geometry/EQM/DAMPE.gdml")     # if NOT set, will use $DMPSWSYS/share/Geometry/FM/DAMPE.gdml
 simAlg.Set("Gdml",DMPSW.WorkPath+"/share/Geometry/BTOctober2014/DAMPE_SPS.gdml")     # if NOT set, will use $DMPSWSYS/share/Geometry/FM/DAMPE.gdml
 #simAlg.Set("Seed","1413071061")
 #simAlg.Set("BT/Magnetic","1.1 0 0")   # default is "0 0 0"
-simAlg.Set("BT/DAMPE/Rotation","30") #  unit: degree. Rotation axis: y
+#simAlg.Set("BT/DAMPE/Rotation","30") #  unit: degree. Rotation axis: y
+simAlg.Set("BT/DAMPE/Translation","-13.75 -13.75 0")  # uint: mm. default is "0 0 0"
 simAlg.Set("BT/PbGlass/Delete","yes")
-#simAlg.Set("BT/DAMPE/Translation","-13.75 -13.75 0")  # uint: mm. default is "0 0 0"
-simAlg.Set("BT/DAMPE/Translation","210.87 -13.75 0")  # uint: mm. default is "0 0 0"
-simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
 
 #simAlg.Set("BT/PhotonGenerator/Material","G4_W") # g4 material, default is G4_Galactic
 #simAlg.Set("BT/PhotonGenerator/Size","50 50 0.5")  # unit: mm, reset default size(200 200 0.5) mm
@@ -47,12 +46,12 @@ simAlg.Set("Mode","Vis")  # if NOT set, will use batch mode
 #-------------------------------------------------------------------
 # Set gps   Warning: NEVER use "gps/direction" and "gps/centre" in job option
 #simAlg.Set("gps/centre","0 0 20000 mm")
-#simAlg.Set("gps/particle","e-")   # default is mu-, 1MeV
-simAlg.Set("gps/pos/type","Plane")
-simAlg.Set("gps/pos/shape","Circle")
-simAlg.Set("gps/pos/radius","4.05 cm")
-simAlg.Set("gps/ene/type","Mono")
-simAlg.Set("gps/energy","50 GeV")
+simAlg.Set("gps/particle","proton")   # default is mu-, 1MeV
+#simAlg.Set("gps/pos/type","Plane")
+#simAlg.Set("gps/pos/shape","circle")
+#simAlg.Set("gps/pos/radius","0.5 cm")
+#simAlg.Set("gps/ene/type","Mono")
+simAlg.Set("gps/energy","4 GeV")
 #simAlg.Set("gps/ene/mono","2. GeV")
 #simAlg.Set("gps/ene/min","50. MeV")
 #simAlg.Set("gps/ene/max","50. MeV")
@@ -61,7 +60,7 @@ simAlg.Set("gps/energy","50 GeV")
 # Append user's service or algorithm into Kernel
 DMPSW.AlgMgr.Append(simAlg)
 
-DMPSW.RootIOSvc.Set("Output/FileName","/data/public_workdir/lizy/chuyang_MC/testDmpSim_C_50GeV_e_planerote5_new_10.root")   # if NOT set, will use DmpSim_Seed-sim.root
+DMPSW.RootIOSvc.Set("Output/FileName","./test_Sim_beamMIPs_4GeV_p_pos_5.root")   # if NOT set, will use DmpSim_Seed-sim.root
 #-------------------------------------------------------------------
 # Run job
 DMPSW.Core.Initialize()
