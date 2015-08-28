@@ -29,16 +29,16 @@ public:
   void SetCharge(const double &c) {fCharge = c;}
   void SetComponent(const int &lep, const int &bar) {fLeptonNo = lep; fBaryonNo = bar;}
 
-  const long& EventID() const {return fEventID;}
-  const double& Time() const {return fTime;}
-  const TVector3& Position() const {return fPosition;}
-  const TVector3& Direction() const {return fDirection;}
-  const double& KineticEnergy() const {return fKineticE;}
-  const int& PDGcode() const {return fPDGCode;}
-  const double& Mass() const {return fMass;}
-  const double& Charge() const {return fCharge;}
-  const int& LeptonNumber() const {return fLeptonNo;}
-  const int& BaryonNumber() const {return fBaryonNo;}
+  long EventID() const {return fEventID;}
+  double Time() const {return fTime;}
+  TVector3 Position() const {return fPosition;}
+  TVector3 Direction() const {return fDirection;}
+  double KineticEnergy() const {return fKineticE;}
+  int PDGcode() const {return fPDGCode;}
+  double Mass() const {return fMass;}
+  double Charge() const {return fCharge;}
+  int LeptonNumber() const {return fLeptonNo;}
+  int BaryonNumber() const {return fBaryonNo;}
 
 private:
   long      fEventID;       // event ID

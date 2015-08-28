@@ -12,6 +12,7 @@
 #include "G4SDManager.hh"
 #include "G4FieldManager.hh"
 #include "G4VisAttributes.hh"
+#include "G4SystemOfUnits.hh"
 #include "G4LogicalVolumeStore.hh"
 #include "G4PhysicalVolumeStore.hh"
 

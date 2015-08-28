@@ -6,7 +6,7 @@
 
 #include "G4Step.hh"
 #include "G4TouchableHistory.hh"
-
+#include "G4SystemOfUnits.hh"
 #include <stdlib.h>     // getenv()
 
 #include "DmpSimBgoSD.h"
@@ -77,11 +77,8 @@ DmpSimBgoSD::DmpSimBgoSD()
  :G4VSensitiveDetector("BgoSD"),
   fEvtMCBgo(0)
 {
-<<<<<<< HEAD
-  _CaliParPath = (std::string)getenv("DMPSWWORK")+"/share/";
-=======
+  _CaliParPath = (std::string)getenv("DMPSWSYS")+"/share/";
   GetPedPar();
->>>>>>> 33df0e4f1e87cc65ce0852432ab207e6056c0a17
   GetMipPar();
   GetAttPar();
   GetDyPar();
@@ -159,7 +156,7 @@ void DmpSimBgoSD::GetAttPar(){
    if(!Apar.good()){
     std::cout<<"Can not open Att Par file!"<<std::endl;
     exit(1);
-  } 
+  }
   int nGbar=14*22;
    for(int i=0; i<nGbar;i++){
       std::cout<<(int)(i/22)<<"  "<<i%22<<"\t\t";
@@ -177,8 +174,9 @@ void DmpSimBgoSD::GetPedPar(){
 
   //Get Pedestal parameters 
   ifstream Ppar;
-  Ppar.open("../CaliParameter/Pedestal/PedPar");
-   if(!Ppar.good()){
+  std::string fn = _CaliParPath+"Simulation/PedPar";
+  Ppar.open(fn.c_str());
+  if(!Ppar.good()){
     std::cout<<"Can not open Pedestal Par file!"<<std::endl;
     exit(1);
   } 
@@ -199,8 +197,9 @@ void DmpSimBgoSD::GetDyPar(){
 
   //Get Pedestal parameters 
   ifstream Dpar;
-  Dpar.open("../CaliParameter/DyCoe/DyPar");
-   if(!Dpar.good()){
+  std::string fn = _CaliParPath+"Simulation/DyPar";
+  Dpar.open(fn.c_str());
+  if(!Dpar.good()){
     std::cout<<"Can not open DynodeRatios Par file!"<<std::endl;
     exit(1);
   }  
@@ -215,36 +214,33 @@ void DmpSimBgoSD::GetMipPar(){
 
   //Get MIPs parameters
   ifstream Mpar;
-<<<<<<< HEAD
   std::string fn = _CaliParPath+"Simulation/MIPsPar";
   Mpar.open(fn.c_str());
-=======
-  Mpar.open("../CaliParameter/MIPs/MIPsPar_beam");
->>>>>>> 33df0e4f1e87cc65ce0852432ab207e6056c0a17
   if(!Mpar.good()){
     std::cout<<"Can not open MIPs Par file!"<<std::endl;
     exit(1);
   }
   TF1 *myMIPs=new TF1("myMIPs",langaufun,0.,5800.,4);
   myMIPs->SetParNames("Width","MP","Area","GSigma");
-
+  //tag 
+  //std::cout<<"~~~~~~~~~~~~~~~~Local Simulation version!~~~~~~~~~~~~~~~~~~"<<std::endl;
   int nGpmt=14*3*22;
-/*  for(int i=0;i<nGpmt;i++){
-      Mpar>>MipPar[i][1]>>MipPar[i][3]>>MipPar[i][0];
-      if(MipPar[i][3]/MipPar[i][1]<0.1&&MipPar[i][1]<100){
-      MipPar[i][3]=0.2*MipPar[i][1];
-      }
-      if(MipPar[i][3]<8){
-      MipPar[i][3]=16;
-      }
+  for(int i=0;i<nGpmt;i++){
+      Mpar>>MipPar[i][0]>>MipPar[i][1]>>MipPar[i][2]>>MipPar[i][3];
+ 
+      //normalized to the Beam voltage to obtain the samilar cuts as real data
+      for(int j=0;j<4;j++){MipPar[i][j]=MipPar[i][j]/4.3;}
+//      Mpar>>MipPar[i][1]>>MipPar[i][3];
+//      if(MipPar[i][3]/MipPar[i][1]<0.1&&MipPar[i][1]<100){
+//      MipPar[i][3]=0.2*MipPar[i][1];
    //   myMIPs->SetParameters(MipPar[i]);
    //   MipPar[i][1]=myMIPs->GetMaximumX(0.8*MipPar[i][1],1.5*MipPar[i][1]);
       //std::cout<<MipPar[i][j]<<"\t";
     //std::cout<<std::endl;
-  }*/
+  }
  //int layer,side,bar;
  // double peak,width,gsigma;
- double spar[6];
+/* double spar[6];
   for(int i=0;i<nGpmt;i++){
     for(int j=0;j<6;j++){
 	    Mpar>>spar[j];
@@ -258,7 +254,7 @@ void DmpSimBgoSD::GetMipPar(){
     std::cout<<spar[0]<<" "<<spar[1]<<" "<<spar[2]<<" ";
     std::cout<<" "<<23*3*PedPar[idy][1]/MipPar[ipmt][1]<<std::endl;
      }
-  
+*/  
   Mpar.close();
 } 
 //-------------------------------------------------------------------

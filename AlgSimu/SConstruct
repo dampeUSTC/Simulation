@@ -28,10 +28,11 @@ env.Prepend(CPPPATH=['./include'])
 env.Append(LIBS=['DmpEvtSim'])   # link your event module, only for algorithm
 env.Prepend(LIBPATH=[XercesPath+'/lib'])
 env.Append(LIBS=['xerces-c'])
+env.Append(LIBPATH=['/opt/boost/lib'])
 env.Append(LIBS=['boost_system','boost_python','boost_filesystem'])
 
 #-------------------------------------------------------------------
-prefix=os.environ['DMPSWWORK']
+prefix=os.environ['DMPSWSYS']
 # install geometry
 def ProcessThisDir(fromPath,toPath):
     for tmp in os.listdir(fromPath):
@@ -40,11 +41,14 @@ def ProcessThisDir(fromPath,toPath):
         else: Default(Command(toPath+'/'+tmp,fromPath+'/'+tmp,Copy("$TARGET","$SOURCE")))
 
 ProcessThisDir("../Geometry/BTOctober2014",prefix+'/share/Geometry/BTOctober2014')
+ProcessThisDir("./share",prefix+'/share/Simulation')
 # install Vis.mac
-Default(Command(prefix+'/share/Simulation/DmpSimGUI.mac','./share/DmpSimGUI.mac',Copy("$TARGET","$SOURCE")))
-Default(Command(prefix+'/share/Simulation/DmpSimVis.mac','./share/DmpSimVis.mac',Copy("$TARGET","$SOURCE")))
-Default(Command(prefix+'/share/Simulation/AttPar','./share/AttPar',Copy("$TARGET","$SOURCE")))
-Default(Command(prefix+'/share/Simulation/MIPsPar','./share/MIPsPar',Copy("$TARGET","$SOURCE")))
+#Default(Command(prefix+'/share/Simulation/DmpSimGUI.mac','./share/DmpSimGUI.mac',Copy("$TARGET","$SOURCE")))
+#Default(Command(prefix+'/share/Simulation/DmpSimVis.mac','./share/DmpSimVis.mac',Copy("$TARGET","$SOURCE")))
+#Default(Command(prefix+'/share/Simulation/AttPar','./share/AttPar',Copy("$TARGET","$SOURCE")))
+#Default(Command(prefix+'/share/Simulation/DyPar','./share/DyPar',Copy("$TARGET","$SOURCE")))
+#Default(Command(prefix+'/share/Simulation/PedPar','./share/PedPar',Copy("$TARGET","$SOURCE")))
+#Default(Command(prefix+'/share/Simulation/MIPsPar','./share/MIPsPar',Copy("$TARGET","$SOURCE")))
 
 #-------------------------------------------------------------------
 # main build

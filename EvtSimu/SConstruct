@@ -17,8 +17,8 @@ env.ParseConfig("root-config --cflags --libs")
 
 #-------------------------------------------------------------------
 # include dir. and external libs
-env.Prepend(CPPPATH=['./include'])
 env.Prepend(CPPPATH=(os.environ['DMPSWSYS']+'/include'))
+env.Prepend(CPPPATH=['./include'])
 #env.Prepend(LIBPATH=['/Users/weiyf/work/DMPSW/Lib'])
 #env.Append(LIBS=['DmpBase'])
 
@@ -26,12 +26,12 @@ env.Prepend(CPPPATH=(os.environ['DMPSWSYS']+'/include'))
 #--------------------------------------------------------------------
 for tmp in os.listdir('./include'):
     if "." not in tmp[0] and "LinkDef" not in tmp and "Dictionary" not in tmp and ".h" in tmp:
-        Default(Command(os.environ['DMPSWWORK']+'/include/'+tmp,'./include/'+tmp,Copy("$TARGET","$SOURCE")))
+        Default(Command(os.environ['DMPSWSYS']+'/include/'+tmp,'./include/'+tmp,Copy("$TARGET","$SOURCE")))
 
 #-------------------------------------------------------------------
 # main build
 goal=env.SharedLibrary(target,Glob('./src/*.cc'))
-Default(env.InstallAs(os.environ['DMPSWWORK']+'/lib/lib'+target+".so",goal))
+Default(env.InstallAs(os.environ['DMPSWSYS']+'/lib/lib'+target+".so",goal))
 if env['PLATFORM'] == 'darwin':    #MacOS
-    Default(env.InstallAs(os.environ['DMPSWWORK']+'/lib/lib'+target+".dylib",goal))
+    Default(env.InstallAs(os.environ['DMPSWSYS']+'/lib/lib'+target+".dylib",goal))
 
