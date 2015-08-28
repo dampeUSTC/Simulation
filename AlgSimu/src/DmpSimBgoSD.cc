@@ -77,15 +77,18 @@ DmpSimBgoSD::DmpSimBgoSD()
  :G4VSensitiveDetector("BgoSD"),
   fEvtMCBgo(0)
 {
+<<<<<<< HEAD
   _CaliParPath = (std::string)getenv("DMPSWWORK")+"/share/";
+=======
+  GetPedPar();
+>>>>>>> 33df0e4f1e87cc65ce0852432ab207e6056c0a17
   GetMipPar();
   GetAttPar();
+  GetDyPar();
   for (int i=0;i<616;i++){
     RanGaus[i] = new TRandom3();
     UInt_t seed=time(0)+i;
     RanGaus[i]->SetSeed(seed);
-
-    
   }
   fEvtMCBgo = new DmpEvtBgoHits();
   gDataBuffer->RegisterObject("Event/MCTruth/Bgo",fEvtMCBgo,"DmpEvtBgoHits");
@@ -159,21 +162,65 @@ void DmpSimBgoSD::GetAttPar(){
   } 
   int nGbar=14*22;
    for(int i=0; i<nGbar;i++){
+      std::cout<<(int)(i/22)<<"  "<<i%22<<"\t\t";
      for(int j=0 ;j<2;j++){ 
       Apar>>AttPar[i][j]; 
-      //std::cout<<AttPar[i][j]<<"\t";
     }
-    //std::cout<<std::endl;
+     // std::cout<<2/AttPar[i][0]*<<"\t"<<600/AttPar[i][1]<<"\t";
+      std::cout<<2/AttPar[i][0]<<"\t";
+    std::cout<<std::endl;
   }
   Apar.close();
+}
+//-------------------------------------------------------------------
+void DmpSimBgoSD::GetPedPar(){
+
+  //Get Pedestal parameters 
+  ifstream Ppar;
+  Ppar.open("../CaliParameter/Pedestal/PedPar");
+   if(!Ppar.good()){
+    std::cout<<"Can not open Pedestal Par file!"<<std::endl;
+    exit(1);
+  } 
+   else{
+  int nGdy=14*22*3*2;
+   for(int i=0; i<nGdy;i++){
+     for(int j=0 ;j<2;j++){ 
+      Ppar>>PedPar[i][j]; 
+  //    std::cout<<PedPar[i][j]<<"\t";
+    }
+  //  std::cout<<std::endl;
+  }
+  Ppar.close();
+   }
+}
+//-------------------------------------------------------------------
+void DmpSimBgoSD::GetDyPar(){
+
+  //Get Pedestal parameters 
+  ifstream Dpar;
+  Dpar.open("../CaliParameter/DyCoe/DyPar");
+   if(!Dpar.good()){
+    std::cout<<"Can not open DynodeRatios Par file!"<<std::endl;
+    exit(1);
+  }  
+  int nGdy=14*22*2;
+   for (int i=0; i<nGdy;i++){
+     Dpar>>DyPar25[i][0]>>DyPar25[i][1]>>DyPar58[i][0]>>DyPar58[i][1]; 
+  }
+  Dpar.close();
 }
 //-------------------------------------------------------------------
 void DmpSimBgoSD::GetMipPar(){
 
   //Get MIPs parameters
   ifstream Mpar;
+<<<<<<< HEAD
   std::string fn = _CaliParPath+"Simulation/MIPsPar";
   Mpar.open(fn.c_str());
+=======
+  Mpar.open("../CaliParameter/MIPs/MIPsPar_beam");
+>>>>>>> 33df0e4f1e87cc65ce0852432ab207e6056c0a17
   if(!Mpar.good()){
     std::cout<<"Can not open MIPs Par file!"<<std::endl;
     exit(1);
@@ -181,18 +228,39 @@ void DmpSimBgoSD::GetMipPar(){
   TF1 *myMIPs=new TF1("myMIPs",langaufun,0.,5800.,4);
   myMIPs->SetParNames("Width","MP","Area","GSigma");
 
-  int nGpmt=14*2*22;
-  for(int i=0;i<nGpmt;i++){
-    for(int j=0;j<4;j++){
-      Mpar>>MipPar[i][j];  
-      myMIPs->SetParameters(MipPar[i]);
-      MipPar[i][1]=myMIPs->GetMaximumX(0.8*MipPar[i][1],1.5*MipPar[i][1]);
+  int nGpmt=14*3*22;
+/*  for(int i=0;i<nGpmt;i++){
+      Mpar>>MipPar[i][1]>>MipPar[i][3]>>MipPar[i][0];
+      if(MipPar[i][3]/MipPar[i][1]<0.1&&MipPar[i][1]<100){
+      MipPar[i][3]=0.2*MipPar[i][1];
+      }
+      if(MipPar[i][3]<8){
+      MipPar[i][3]=16;
+      }
+   //   myMIPs->SetParameters(MipPar[i]);
+   //   MipPar[i][1]=myMIPs->GetMaximumX(0.8*MipPar[i][1],1.5*MipPar[i][1]);
       //std::cout<<MipPar[i][j]<<"\t";
-    }
     //std::cout<<std::endl;
-  }
+  }*/
+ //int layer,side,bar;
+ // double peak,width,gsigma;
+ double spar[6];
+  for(int i=0;i<nGpmt;i++){
+    for(int j=0;j<6;j++){
+	    Mpar>>spar[j];
+    }
+    if(((int)spar[1])==2)continue;
+    int ipmt=(spar[0]*2+spar[1])*22+spar[2];
+    MipPar[ipmt][0]=spar[4];
+    MipPar[ipmt][1]=spar[3];
+    MipPar[ipmt][3]=spar[5];
+    int idy=ipmt*3+2;
+    std::cout<<spar[0]<<" "<<spar[1]<<" "<<spar[2]<<" ";
+    std::cout<<" "<<23*3*PedPar[idy][1]/MipPar[ipmt][1]<<std::endl;
+     }
+  
   Mpar.close();
-}
+} 
 //-------------------------------------------------------------------
 void DmpSimBgoSD::Eny2ADC(const short &id, const double &e, const double &x,const double &y){
   //step Energy to ADC
@@ -229,6 +297,7 @@ void DmpSimBgoSD::Sampling(){
     for(short bar=0;bar<22;bar++){
       short iGbar=layer*22+bar;
       short iGpmt[2]={layer*2*22+bar,(layer*2+1)*22+bar};
+      short iGdy8[2]={iGpmt[0]*3+2,iGpmt[1]*3+2};
 	  short gid_bar=DmpBgoBase::ConstructGlobalBarID(layer,bar);
       if(TotalE[iGpmt[0]]>0){
 //	  std::cout<<iGpmt[0]<<std::endl;
@@ -243,13 +312,30 @@ void DmpSimBgoSD::Sampling(){
         MipCov[0]=TMath::Exp(AttPar[iGbar][0]*30/2);   //non-att normalized ADC counts/MeV;
         MipCov[1]=TMath::Exp(AttPar[iGbar][0]*30/2);   //non-att normalized ADC counts/MeV;
         double Mean[2]={TotalE[iGpmt[0]]*MipCov[0],TotalE[iGpmt[1]]*MipCov[1]};
-        double Sigma[2]={22.5*MipPar[iGpmt[0]][3]/MipPar[iGpmt[0]][1]*TMath::Sqrt(Mean[0]/22.5),22.5*MipPar[iGpmt[1]][3]/MipPar[iGpmt[1]][1]*TMath::Sqrt(Mean[1]/22.5)};
+        //double Sigma[2]={22.5*MipPar[iGpmt[0]][3]/MipPar[iGpmt[0]][1]*TMath::Sqrt(Mean[0]/22.5),22.5*MipPar[iGpmt[1]][3]/MipPar[iGpmt[1]][1]*TMath::Sqrt(Mean[1]/22.5)};
+        double Sigma[2];
+	short usedy[2];
+	for(int iside=0;iside<2;iside++){
+	usedy[iside]=ChoiseDynode(Mean[iside],iGpmt[iside]);
+	Sigma[iside]=SetSigma(iGpmt[iside],usedy[iside],Mean[iside]);
+	} 
+//	std::cout<<"BarEnergy"<<":s0 "<<Mean[0]<<", s1 "<<Mean[1]<<std::endl;
+//	std::cout<<"BarSigma"<<":s0 "<<Sigma[0]<<", s1 "<<Sigma[1]<<std::endl;
+//	std::cout<<"Bardynode"<<":s0 "<<usedy[0]<<", s1 "<<usedy[1]<<std::endl;
+//	std::cout<<"MIPsPar_MPV"<<":s0 "<<MipPar[iGpmt[0]][1]<<", s1 "<<MipPar[iGpmt[1]][1]<<std::endl;
+//	std::cout<<"MIPsPar_Gsigma"<<":s0 "<<MipPar[iGpmt[0]][3]<<", s1 "<<MipPar[iGpmt[1]][3]<<std::endl;
+
 	  
         //  TRandom *s0=new TRandom();
         //  TRandom *s1=new TRandom();
 	    double ES0=RanGaus[iGpmt[0]]->Gaus(Mean[0],Sigma[0]);
 	    double ES1=RanGaus[iGpmt[1]]->Gaus(Mean[1],Sigma[1]);
-        if(ES0>0&&ES1>0){
+            double cut0=22.5*3*PedPar[iGdy8[0]][1]/MipPar[iGpmt[0]][1];
+            double cut1=22.5*3*PedPar[iGdy8[1]][1]/MipPar[iGpmt[1]][1];
+           // std::cout<<"cut0: "<<cut0<<"MeV"<<std::endl;
+           // std::cout<<"cut1: "<<cut1<<"MeV"<<std::endl;
+
+        if(ES0>cut0&&ES1>cut1){
 	  fDigitBgo->fGlobalBarID.push_back(gid_bar);
           fDigitBgo->fES0.push_back(ES0);
           fDigitBgo->fES1.push_back(ES1);
@@ -259,7 +345,7 @@ void DmpSimBgoSD::Sampling(){
 	    Position.SetX(pos);	  
 	    double yy=DmpBgoBase::Parameter()->BarCenter(gid_bar).y();
             Position.SetY(yy);
-	  }
+	   }
 	  else{
 	    Position.SetY(pos);
 	    double xx=DmpBgoBase::Parameter()->BarCenter(gid_bar).x();
@@ -268,8 +354,48 @@ void DmpSimBgoSD::Sampling(){
 	  double zz=DmpBgoBase::Parameter()->LayerCenter(gid_bar).z();
           Position.SetZ(zz);
           fDigitBgo->fPosition.push_back(Position);
-        }
+        }  
       }
     }
   }
 }
+short DmpSimBgoSD::ChoiseDynode(double barE,short gid_pmt){//return the selected dynode
+  if(barE<=10000./MipPar[gid_pmt][1]*22.5){return 8;}//set ADC cut at 10000
+  else {
+    double Maxdy5E=(10000.*DyPar58[gid_pmt][0]+DyPar58[gid_pmt][1])/MipPar[gid_pmt][1]*22.5;
+    if(barE<=Maxdy5E){return 5;}
+    else { 
+      double Maxdy2E=((14000.*DyPar25[gid_pmt][0]+DyPar25[gid_pmt][1])*DyPar58[gid_pmt][0]+DyPar58[gid_pmt][1])/MipPar[gid_pmt][1]*22.5;
+      if(barE<=Maxdy2E){return 2;}
+      else return 0;///dynode 2 became saturated!!!!!!!!
+    } 
+   }
+} 
+double DmpSimBgoSD::SetSigma(short gid_pmt, short usedynode,double barE){
+  int gid_dy8=gid_pmt*3+2;
+  
+  double AbsSigma=22.5*TMath::Sqrt(MipPar[gid_pmt][3]*MipPar[gid_pmt][3]-PedPar[gid_dy8][1]*PedPar[gid_dy8][1])/MipPar[gid_pmt][1]/TMath::Sqrt(22.5);
+  if(usedynode==8){
+    double noisedy8=22.5*PedPar[gid_dy8][1]/MipPar[gid_pmt][1];
+    double statcdy8=AbsSigma*TMath::Sqrt(barE);
+    double sigmady8=TMath::Sqrt(statcdy8*statcdy8+noisedy8*noisedy8);
+    return sigmady8;
+    }
+  else {
+   if(usedynode==5){
+     int gid_dy5=gid_pmt*3+1;
+     double noisedy5=22.5*PedPar[gid_dy5][1]*DyPar58[gid_pmt][0]/MipPar[gid_pmt][1];
+     double statcdy5=AbsSigma*TMath::Sqrt(barE);
+     double sigmady5=TMath::Sqrt(statcdy5*statcdy5+noisedy5*noisedy5);
+     return sigmady5;
+   } 
+   else{
+     int gid_dy2=gid_pmt*3;
+     double noisedy2=22.5*PedPar[gid_dy2][1]*DyPar58[gid_pmt][0]*DyPar25[gid_pmt][0]/MipPar[gid_pmt][1];
+     double statcdy2=AbsSigma*TMath::Sqrt(barE);
+     double sigmady2=TMath::Sqrt(statcdy2*statcdy2+noisedy2*noisedy2);
+     return sigmady2;
+   }  
+ } 
+}  
+

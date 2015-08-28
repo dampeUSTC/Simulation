@@ -32,16 +32,26 @@ private:
   void GetMipPar();
   //Get Attenuation coefficients 
   void GetAttPar();
+  //Get Pedestal 
+  void GetPedPar();
+  //Get Dynode ratios
+  void GetDyPar();
   //step Energy to ADC
   void Eny2ADC(const short &id, const double &e, const double &x,const double &y);
   //Sampling
   void Sampling();
+  short ChoiseDynode(double barE,short gid_pmt);
+  double SetSigma(short gid_pmt, short usedynode, double barE);
 
 private:
   DmpEvtBgoHits     *fEvtMCBgo;
   DmpEvtBgoHits     *fDigitBgo;
   double MipPar[616][4];
   double AttPar[308][2];
+  double DyPar25[616][2];
+  double DyPar58[616][2];
+  double PedPar[1848][2];
+
 //  double AttHit[2];//ADC counts
   double TotalE[616];
   TRandom3 *RanGaus[616];
