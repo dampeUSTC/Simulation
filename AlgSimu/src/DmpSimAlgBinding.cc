@@ -6,6 +6,8 @@ BOOST_PYTHON_MODULE(libDmpSimAlg){
 
   class_<DmpSimAlg,boost::noncopyable,bases<DmpVAlg> >("DmpSimAlg",init<>())
      .def("SaveTrackVertex",    &DmpSimAlg::SaveTrackVertex)
+     .def("SetGPSType",    &DmpSimAlg::SetGPSType)
+     .def("ResetGPS",    &DmpSimAlg::ResetGPS)
    ;
 }
 

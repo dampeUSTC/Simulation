@@ -59,6 +59,13 @@ public:
   bool Finalize();
   DmpMetadata* GetMetadata(){return fMetadata;}
 
+public:
+  void ResetGPS();
+  void SetGPSType(int i);
+  void ActiveGPS0();
+  void ActiveGPS1();    // spherical surface for Acc. simu.
+  void ActiveGPS2();    // beam test
+
 private:
   DmpMetadata           *fMetadata;
   DmpSimRunManager      *fSimRunMgr;    // run manager of simulation

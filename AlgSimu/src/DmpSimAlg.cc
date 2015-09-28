@@ -42,9 +42,6 @@ DmpSimAlg::DmpSimAlg()
   fMetadata->SetOption("Gdml","FM");        // Fly Mode
   fMetadata->SetOption("Seed",boost::lexical_cast<std::string>(fMetadata->JobTime()));
   fMetadata->SetOption("Nud/DeltaTime","100");  // 100 ns
-  fMetadata->SetOption("gps/particle","mu-");
-  fMetadata->SetOption("gps/direction","0 0 1");
-  fMetadata->SetOption("gps/centre","0 0 -2700 cm");//1700 is not enough for SPS
   gRootIOSvc->Set("Output/FileName","DmpSim_"+fMetadata->GetValue("Seed"));
   gRootIOSvc->Set("Output/Key","sim");
 }
@@ -68,6 +65,7 @@ void DmpSimAlg::Set(const std::string &type,const std::string &argv){
 //-------------------------------------------------------------------
 #include <stdlib.h>     // getenv()
 bool DmpSimAlg::Initialize(){
+std::cout<<"WWWDEBUG: "<<__FILE__<<"("<<__LINE__<<")"<<std::endl;
 // set seed
   DmpLogCout<<"\tRandom seed: "<<fMetadata->GetValue("Seed")<<DmpLogEndl;      // keep this information in any case
   CLHEP::HepRandom::setTheSeed(boost::lexical_cast<long>(fMetadata->GetValue("Seed")));
@@ -150,4 +148,39 @@ bool DmpSimAlg::Finalize(){
   }
   return true;
 }
+
+void DmpSimAlg::ResetGPS(){
+    fMetadata->ClearOptions("gps/");
+}
+
+void DmpSimAlg::ActiveGPS0(){
+}
+
+void DmpSimAlg::ActiveGPS1()
+{
+  fMetadata->SetOption("gps/particle","mu-");
+  fMetadata->SetOption("gps/pos/shape","Sphere");
+  fMetadata->SetOption("gps/pos/type","Surface");
+  fMetadata->SetOption("gps/pos/centre","0 0 0 cm");
+  fMetadata->SetOption("gps/pos/radius","1 m");
+  fMetadata->SetOption("gps/ang/type","iso");
+}
+
+void DmpSimAlg::ActiveGPS2()
+{
+  fMetadata->SetOption("gps/particle","mu-");
+  fMetadata->SetOption("gps/centre","0 0 -2700 cm");//1700 is not enough for SPS
+  fMetadata->SetOption("gps/direction","0 0 1");
+}
+
+void DmpSimAlg::SetGPSType(int i){
+  if(i == 0){
+    this->ActiveGPS0();
+  }else if(i == 1){
+    this->ActiveGPS1();
+  }else if(i == 2){
+    this->ActiveGPS2();
+  }
+}
+
 

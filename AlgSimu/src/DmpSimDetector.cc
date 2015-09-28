@@ -109,9 +109,8 @@ G4VPhysicalVolume* DmpSimDetector::Construct(){
 void DmpSimDetector::Adjustment()const{
   short nCmd = fMetadata->OptionSize();
   G4VPhysicalVolume *PV = PV = G4PhysicalVolumeStore::GetInstance()->GetVolume("Ancillary_Det_PV",false);
-  if(PV){
-    PV->GetLogicalVolume()->SetVisAttributes(G4VisAttributes::Invisible);
-  }
+  if(PV == 0 ) return;
+  PV->GetLogicalVolume()->SetVisAttributes(G4VisAttributes::Invisible);
   for(short i =0; i<nCmd;++i){
     std::string command = fMetadata->GetCommand(i);
     if(command == "BT/DAMPE/Rotation"){

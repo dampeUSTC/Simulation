@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Schema/gdml.xsd">
+
+  <define>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v0" unit="mm" x="-680" y="-380" z="43.1979942322"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v1" unit="mm" x="80" y="-380" z="43.1979942322"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v2" unit="mm" x="-680" y="380" z="43.1979942322"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v3" unit="mm" x="80" y="380" z="43.1979942322"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v4" unit="mm" x="-680" y="-380" z="18.1979961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5" unit="mm" x="-680" y="380" z="18.1979961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6" unit="mm" x="80" y="-380" z="18.1979961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v7" unit="mm" x="80" y="380" z="18.1979961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v8" unit="mm" x="-680" y="-380" z="75.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v9" unit="mm" x="80" y="-380" z="75.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v10" unit="mm" x="-680" y="380" z="75.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v11" unit="mm" x="80" y="380" z="75.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v12" unit="mm" x="-680" y="-380" z="49.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13" unit="mm" x="-680" y="380" z="49.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14" unit="mm" x="80" y="-380" z="49.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v15" unit="mm" x="80" y="380" z="49.9479980469"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v16" unit="mm" x="-680" y="-380" z="-120.5520401"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v17" unit="mm" x="80" y="-380" z="-120.5520401"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v18" unit="mm" x="-680" y="380" z="-120.5520401"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v19" unit="mm" x="80" y="380" z="-120.5520401"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v20" unit="mm" x="-680" y="-380" z="-146.552032471"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21" unit="mm" x="-680" y="380" z="-146.552032471"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22" unit="mm" x="80" y="-380" z="-146.552032471"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v23" unit="mm" x="80" y="380" z="-146.552032471"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v24" unit="mm" x="-680" y="-380" z="-55.0520057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v25" unit="mm" x="80" y="-380" z="-55.0520057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v26" unit="mm" x="-680" y="380" z="-55.0520057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v27" unit="mm" x="80" y="380" z="-55.0520057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v28" unit="mm" x="-680" y="-380" z="-81.0520019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29" unit="mm" x="-680" y="380" z="-81.0520019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30" unit="mm" x="80" y="-380" z="-81.0520019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v31" unit="mm" x="80" y="380" z="-81.0520019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v32" unit="mm" x="-680" y="-380" z="-87.8020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v33" unit="mm" x="80" y="-380" z="-87.8020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v34" unit="mm" x="-680" y="380" z="-87.8020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v35" unit="mm" x="80" y="380" z="-87.8020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v36" unit="mm" x="-680" y="-380" z="-113.802047729"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37" unit="mm" x="-680" y="380" z="-113.802047729"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38" unit="mm" x="80" y="-380" z="-113.802047729"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v39" unit="mm" x="80" y="380" z="-113.802047729"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v40" unit="mm" x="-680" y="-380" z="10.4479961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v41" unit="mm" x="80" y="-380" z="10.4479961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v42" unit="mm" x="-680" y="380" z="10.4479961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v43" unit="mm" x="80" y="380" z="10.4479961395"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v44" unit="mm" x="-680" y="-380" z="-14.5520038605"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45" unit="mm" x="-680" y="380" z="-14.5520038605"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46" unit="mm" x="80" y="-380" z="-14.5520038605"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v47" unit="mm" x="80" y="380" z="-14.5520038605"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v48" unit="mm" x="-680" y="-380" z="-22.3020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v49" unit="mm" x="80" y="-380" z="-22.3020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v50" unit="mm" x="-680" y="380" z="-22.3020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v51" unit="mm" x="80" y="380" z="-22.3020019531"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v52" unit="mm" x="-680" y="-380" z="-47.3020057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53" unit="mm" x="-680" y="380" z="-47.3020057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54" unit="mm" x="80" y="-380" z="-47.3020057678"/>
+    <position name="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v55" unit="mm" x="80" y="380" z="-47.3020057678"/>
+  </define>
+
+
+  <materials>
+    <element name="aluminum" formula="Al" Z="13"> 
+       <atom value="26.98"/>   
+    </element>
+    <material name="Honeycomb" state="solid">
+       <D value="0.030" unit="g/cm3"/>
+       <fraction n="1." ref="aluminum"/>
+    </material>
+  </materials>
+
+  <solids>
+    <tessellated aunit="deg" lunit="mm" name="DAM_ALLTRAY_Ass_Hcomb_april2014_stl0x1027780">
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v0" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v1" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v2"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v2" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v1" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v3"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v4" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v7"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v2" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v3" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v3" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v7"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v1" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v3"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v3" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v7"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v1" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v0" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v6" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v0" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v4"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v2" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v0"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v0" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v5" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v4"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v8" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v9" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v10"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v10" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v9" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v11"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v12" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v15"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v10" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v11" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v11" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v15"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v9" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v11"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v11" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v15"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v9" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v8" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v14" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v8" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v12"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v10" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v8"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v8" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v13" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v12"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v16" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v17" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v18"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v18" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v17" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v19"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v20" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v23"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v18" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v19" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v19" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v23"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v17" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v19"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v19" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v23"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v17" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v16" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v22" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v16" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v20"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v18" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v16"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v16" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v21" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v20"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v24" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v25" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v26"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v26" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v25" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v27"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v28" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v31"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v26" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v27" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v27" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v31"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v25" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v27"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v27" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v31"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v25" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v24" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v30" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v24" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v28"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v26" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v24"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v24" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v29" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v28"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v32" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v33" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v34"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v34" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v33" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v35"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v36" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v39"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v34" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v35" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v35" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v39"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v33" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v35"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v35" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v39"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v33" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v32" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v38" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v32" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v36"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v34" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v32"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v32" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v37" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v36"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v40" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v41" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v42"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v42" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v41" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v43"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v44" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v47"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v42" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v43" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v43" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v47"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v41" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v43"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v43" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v47"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v41" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v40" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v46" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v40" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v44"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v42" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v40"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v40" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v45" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v44"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v48" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v49" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v50"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v50" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v49" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v51"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v52" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v55"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v50" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v51" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v51" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v55"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v49" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v51"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v51" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v55"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v49" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v48" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v54" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v48" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v52"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v50" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v48"/>
+      <triangular vertex1="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v48" vertex2="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v53" vertex3="DAM_ALLTRAY_Ass_Hcomb_april2014.stl_v52"/>
+    </tessellated>    
+  </solids>
+
+  <structure>
+    <volume name="stk_hcomb">
+      <materialref ref="Honeycomb"/>
+      <solidref ref="DAM_ALLTRAY_Ass_Hcomb_april2014_stl0x1027780"/>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="stk_hcomb"/>
+  </setup>
+
+</gdml>
