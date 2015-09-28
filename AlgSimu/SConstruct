@@ -32,7 +32,7 @@ env.Append(LIBPATH=['/opt/boost/lib'])
 env.Append(LIBS=['boost_system','boost_python','boost_filesystem'])
 
 #-------------------------------------------------------------------
-prefix=os.environ['DMPSWSYS']
+prefix=os.environ['DMPSWWORK']
 # install geometry
 def ProcessThisDir(fromPath,toPath):
     for tmp in os.listdir(fromPath):
@@ -41,6 +41,7 @@ def ProcessThisDir(fromPath,toPath):
         else: Default(Command(toPath+'/'+tmp,fromPath+'/'+tmp,Copy("$TARGET","$SOURCE")))
 
 ProcessThisDir("../Geometry/BTOctober2014",prefix+'/share/Geometry/BTOctober2014')
+ProcessThisDir("../Geometry/Orbit",prefix+'/share/Geometry/Orbit')
 ProcessThisDir("./share",prefix+'/share/Simulation')
 # install Vis.mac
 #Default(Command(prefix+'/share/Simulation/DmpSimGUI.mac','./share/DmpSimGUI.mac',Copy("$TARGET","$SOURCE")))
