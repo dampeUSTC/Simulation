@@ -65,7 +65,6 @@ void DmpSimAlg::Set(const std::string &type,const std::string &argv){
 //-------------------------------------------------------------------
 #include <stdlib.h>     // getenv()
 bool DmpSimAlg::Initialize(){
-std::cout<<"WWWDEBUG: "<<__FILE__<<"("<<__LINE__<<")"<<std::endl;
 // set seed
   DmpLogCout<<"\tRandom seed: "<<fMetadata->GetValue("Seed")<<DmpLogEndl;      // keep this information in any case
   CLHEP::HepRandom::setTheSeed(boost::lexical_cast<long>(fMetadata->GetValue("Seed")));
