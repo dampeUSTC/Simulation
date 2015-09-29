@@ -161,6 +161,8 @@ void DmpSimAlg::ActiveGPS0()
   fMetadata->SetOption("gps/pos/radius","5 mm");
   fMetadata->SetOption("gps/direction","0 0 1");
   fMetadata->SetOption("gps/particle","mu-");
+  fMetadata->SetOption("gps/ene/type","Mono");
+  fMetadata->SetOption("gps/ene/mono","10 GeV");
 }
 
 void DmpSimAlg::ActiveGPS1()    // beam
@@ -172,17 +174,21 @@ void DmpSimAlg::ActiveGPS1()    // beam
   fMetadata->SetOption("gps/pos/sigma_r","2 mm");
   fMetadata->SetOption("gps/direction","0 0 1");
   fMetadata->SetOption("gps/particle","mu-");
+  fMetadata->SetOption("gps/ene/type","Gauss");
+  fMetadata->SetOption("gps/ene/mono","100 GeV");
+  fMetadata->SetOption("gps/ene/sigma","10 MeV");
 }
 
 void DmpSimAlg::ActiveGPS2()    // plane
 {
   fMetadata->SetOption("gps/centre","0 0 -50 cm");
   fMetadata->SetOption("gps/pos/type","Plane");
-  fMetadata->SetOption("gps/pos/shape","Rectangle");
-  fMetadata->SetOption("gps/pos/halfx","50 cm");
-  fMetadata->SetOption("gps/pos/halfy","50 cm");
+  fMetadata->SetOption("gps/pos/shape","Circle");
+  fMetadata->SetOption("gps/pos/radius","50 cm");
   fMetadata->SetOption("gps/direction","0 0 1");
   fMetadata->SetOption("gps/particle","mu-");
+  fMetadata->SetOption("gps/ene/type","Mono");
+  fMetadata->SetOption("gps/ene/mono","10 GeV");
 }
 
 void DmpSimAlg::ActiveGPS3()    // sphere
@@ -193,6 +199,8 @@ void DmpSimAlg::ActiveGPS3()    // sphere
   fMetadata->SetOption("gps/pos/radius","1 m");
   fMetadata->SetOption("gps/ang/type","cos");
   fMetadata->SetOption("gps/particle","mu-");
+  fMetadata->SetOption("gps/ene/type","Mono");
+  fMetadata->SetOption("gps/ene/mono","10 GeV");
 }
 
 void DmpSimAlg::SetGPSType(int i){
