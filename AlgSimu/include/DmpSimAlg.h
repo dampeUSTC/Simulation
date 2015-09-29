@@ -62,9 +62,10 @@ public:
 public:
   void ResetGPS();
   void SetGPSType(int i);
-  void ActiveGPS0();
-  void ActiveGPS1();    // spherical surface for Acc. simu.
-  void ActiveGPS2();    // beam test
+  void ActiveGPS0();    // point
+  void ActiveGPS1();    // beam test
+  void ActiveGPS2();    // plane
+  void ActiveGPS3();    // spherical surface for Acc. simu.
 
 private:
   DmpMetadata           *fMetadata;

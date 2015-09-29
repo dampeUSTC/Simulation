@@ -153,24 +153,46 @@ void DmpSimAlg::ResetGPS(){
     fMetadata->ClearOptions("gps/");
 }
 
-void DmpSimAlg::ActiveGPS0(){
+void DmpSimAlg::ActiveGPS0()
+{   // point
+  fMetadata->SetOption("gps/centre","0 0 -50 cm");
+  fMetadata->SetOption("gps/pos/type","Plane");
+  fMetadata->SetOption("gps/pos/shape","Circle");
+  fMetadata->SetOption("gps/pos/radius","5 mm");
+  fMetadata->SetOption("gps/direction","0 0 1");
+  fMetadata->SetOption("gps/particle","mu-");
 }
 
-void DmpSimAlg::ActiveGPS1()
+void DmpSimAlg::ActiveGPS1()    // beam
 {
+  fMetadata->SetOption("gps/centre","0 0 -2700 cm");//1700 is not enough for SPS
+  fMetadata->SetOption("gps/pos/type","Beam");
+  fMetadata->SetOption("gps/pos/shape","Circle");
+  fMetadata->SetOption("gps/pos/radius","1 mm");
+  fMetadata->SetOption("gps/pos/sigma_r","2 mm");
+  fMetadata->SetOption("gps/direction","0 0 1");
   fMetadata->SetOption("gps/particle","mu-");
+}
+
+void DmpSimAlg::ActiveGPS2()    // plane
+{
+  fMetadata->SetOption("gps/centre","0 0 -50 cm");
+  fMetadata->SetOption("gps/pos/type","Plane");
+  fMetadata->SetOption("gps/pos/shape","Rectangle");
+  fMetadata->SetOption("gps/pos/halfx","50 cm");
+  fMetadata->SetOption("gps/pos/halfy","50 cm");
+  fMetadata->SetOption("gps/direction","0 0 1");
+  fMetadata->SetOption("gps/particle","mu-");
+}
+
+void DmpSimAlg::ActiveGPS3()    // sphere
+{
   fMetadata->SetOption("gps/pos/shape","Sphere");
   fMetadata->SetOption("gps/pos/type","Surface");
   fMetadata->SetOption("gps/pos/centre","0 0 0 cm");
   fMetadata->SetOption("gps/pos/radius","1 m");
-  fMetadata->SetOption("gps/ang/type","iso");
-}
-
-void DmpSimAlg::ActiveGPS2()
-{
+  fMetadata->SetOption("gps/ang/type","cos");
   fMetadata->SetOption("gps/particle","mu-");
-  fMetadata->SetOption("gps/centre","0 0 -2700 cm");//1700 is not enough for SPS
-  fMetadata->SetOption("gps/direction","0 0 1");
 }
 
 void DmpSimAlg::SetGPSType(int i){
@@ -180,6 +202,8 @@ void DmpSimAlg::SetGPSType(int i){
     this->ActiveGPS1();
   }else if(i == 2){
     this->ActiveGPS2();
+  }else if(i == 3){
+    this->ActiveGPS3();
   }
 }
 
