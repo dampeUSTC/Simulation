@@ -212,6 +212,10 @@ void DmpSimAlg::SetGPSType(int i){
   }else if(i == 3){
     this->ActiveGPS3();
   }
+  std::string name = Form("SimT%d_",i);
+  name += fMetadata->GetValue("Seed");
+  name += "_"+fMetadata->GetValue("gps/particle");
+  gRootIOSvc->Set("Output/FileName",name);
 }
 
 
