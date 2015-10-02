@@ -42,6 +42,8 @@ DmpSimAlg::DmpSimAlg()
   fMetadata->SetOption("Gdml","FM");        // Fly Mode
   fMetadata->SetOption("Seed",boost::lexical_cast<std::string>(fMetadata->JobTime()));
   fMetadata->SetOption("Nud/DeltaTime","100");  // 100 ns
+  fMetadata->SetOption("gps/centre","0 0 -2700 cm");//1700 is not enough for SPS
+  fMetadata->SetOption("gps/direction","0 0 1");
   gRootIOSvc->Set("Output/FileName","DmpSim_"+fMetadata->GetValue("Seed"));
   gRootIOSvc->Set("Output/Key","sim");
 }
@@ -203,6 +205,7 @@ void DmpSimAlg::ActiveGPS3()    // sphere
 }
 
 void DmpSimAlg::SetGPSType(int i){
+  this->ResetGPS();
   if(i == 0){
     this->ActiveGPS0();
   }else if(i == 1){
